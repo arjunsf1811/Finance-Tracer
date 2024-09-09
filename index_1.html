@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Finance Tracker</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <section class="form-section">
+        <h2>Add Transaction</h2>
+        <form id="transactionForm">
+            <input type="text" id="amount" placeholder="Amount" required>
+            <select id="transactionType">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <input type="text" id="category" placeholder="Category" required>
+            <button type="submit">Add Transaction</button>
+        </form>
+    </section>
+
+    <section class="summary-section">
+        <h2>Budget Summary</h2>
+        <p>Total Income: <span id="totalIncome">$0</span></p>
+        <p>Total Expenses: <span id="totalExpenses">$0</span></p>
+        <p>Remaining Budget: <span id="remainingBudget">$0</span></p>
+    </section>
+
+    <section class="chart-section">
+        <h2>Expense Breakdown</h2>
+        <canvas id="expenseChart"></canvas>
+    </section>
+
+    <section class="currency-converter">
+        <h2>Currency Converter</h2>
+        <input type="text" id="amountToConvert" placeholder="Amount" required>
+        <select id="currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <!-- Add more currency options here -->
+        </select>
+        <button id="convertCurrency">Convert</button>
+        <p>Converted Amount: <span id="convertedAmount">$0</span></p>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
